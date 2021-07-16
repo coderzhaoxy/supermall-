@@ -1,26 +1,31 @@
 <template>
-  <div class="goods">
-    <goods-list-item v-for="item in goods" :goods-item="item">
-
-    </goods-list-item>
+  <div class="goods" >
+    <goods-list-item  v-for="item in showGoods" :goods-item="item" @click="itemClick"></goods-list-item>
   </div>
 </template>
 
 <script>
   import GoodsListItem from "./GoodsListItem";
+
   export default {
     name: "GoodsList",
-    components:{
-      GoodsListItem
-    },
-    props:{
-      goods:{
-        type:Array,
-        default(){
-          return[]
+    props: {
+      showGoods: {
+        type: Array,
+        default() {
+          return []
         }
       }
+    },
+    components: {
+      GoodsListItem
+    },
+    methods:{
+      itemClick(){
+        console.log(this.showGoods);
+      }
     }
+
   }
 </script>
 
@@ -30,7 +35,5 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 2px 0 0 0;
-
   }
-
 </style>

@@ -19,17 +19,17 @@
 </template>
 
 <script>
-    export default {
-        name: "DetailParamInfo",
-      props: {
-        paramInfo: {
-          type: Object,
-          default(){
-            return{}
-          }
+  export default {
+    name: "DetailParamsInfo",
+    props: {
+      paramInfo: {
+        type: Object,
+        default() {
+          return {}
         }
       }
     }
+  }
 </script>
 
 <style scoped>
@@ -49,7 +49,7 @@
   }
 
   .param-info table tr td {
-    border-bottom: 1px solid rgba(100,100,100,.1);
+    border-bottom: 1px solid rgba(100, 100, 100, .1);
   }
 
   .info-param-key {
@@ -58,7 +58,7 @@
   }
 
   .info-param {
-    border-top: 1px solid rgba(0,0,0,.1);
+    border-top: 1px solid rgba(0, 0, 0, .1);
   }
 
   .param-value {

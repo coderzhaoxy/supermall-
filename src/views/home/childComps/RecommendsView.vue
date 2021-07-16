@@ -1,11 +1,10 @@
 <template>
-  <div class="recommend">
-    <div v-for="item in recommends" class="recommend-item">
-      <a :href="item.link">
-        <img :src="item.image" alt="">
-        <div>{{item.title}}</div>
-      </a>
+  <div class="recommend" >
+    <div v-for="item in recommend" class="recommend-item">
+      <img :src="item.image" alt="">
+      <div>{{item.title}}</div>
     </div>
+
   </div>
 </template>
 
@@ -13,7 +12,7 @@
   export default {
     name: "RecommendsView",
     props: {
-      recommends: {
+      recommend: {
         type: Array,
         default() {
           return []
@@ -30,7 +29,7 @@
     text-align: center;
     font-size: 12px;
     padding: 10px 0 20px;
-    border-bottom: 10px  solid #eee;
+    border-bottom: 10px solid #eee;
   }
 
   .recommend-item {
@@ -42,5 +41,4 @@
     height: 70px;
     margin-bottom: 10px;
   }
-
 </style>

@@ -1,10 +1,9 @@
-export  default  {
-  //mutations的目的是修改state中的状态
-  //mutations中的方法尽可能完成是事件比较单一
+export default {
   addCounter(state, payload) {
-    payload.count++
+    payload.count += 1
   },
   addToCart(state, payload) {
+    payload.checked = false
     state.cartList.push(payload)
   }
 }

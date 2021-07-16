@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-06-01 20:00:13
+ * @LastEditTime: 2021-07-13 12:52:57
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \pramall\src\views\detail\childcomps\DetailBottomBar.vue
+-->
 <template>
   <div class="bottom-bar">
     <div class="bar-item bar-left">
@@ -19,6 +27,7 @@
       <div class="buy">购买</div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -26,8 +35,7 @@
     name: "DetailBottomBar",
     methods: {
       addToCart() {
-        this.$emit('addCart')
-
+        this.$emit('addToCart')
       }
     }
   }
@@ -35,15 +43,12 @@
 
 <style scoped>
   .bottom-bar {
-    height: 49px;
+    /* height: 49px; */
+    background: #fff;
     position: relative;
     display: flex;
     text-align: center;
-    background-color: #ffffff;
-    /*position: fixed;*/
-    /*left: 0;*/
-    /*right: 0;*/
-    /*bottom: 0;*/
+    z-index: 8;
   }
 
   .bar-item {
@@ -89,5 +94,4 @@
   .bar-right .buy {
     background-color: #f69;
   }
-
 </style>

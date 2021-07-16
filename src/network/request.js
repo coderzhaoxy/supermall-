@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-05-27 20:45:38
+ * @LastEditTime: 2021-07-16 16:08:00
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \supermall\src\network\request.js
+ */
 import axios from 'axios'
 
 export function request(config) {
@@ -6,20 +14,16 @@ export function request(config) {
     timeout: 5000
   })
 
-  instance.interceptors.request.use(config=>{
+  instance.interceptors.request.use(config => {
     return config
-  },err => {
-    // console.log(err);
+  }, err => {
+
   })
-  //响应拦截
-  instance.interceptors.response.use(res=>{
-    // console.log(res);
+
+  instance.interceptors.response.use(res => {
     return res.data
-  },err=>{
-    console.log(err);
+  }, err => {
+    console.log(err)
   })
-  //3.发送网络请求
   return instance(config)
 }
-
-
